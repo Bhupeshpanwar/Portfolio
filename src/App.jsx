@@ -720,7 +720,7 @@ const certificates = [
         <div className="hero-content">
           <div className="hero-avatar">
             <div className="avatar-circle">
-              <img src="WhatsApp Image 2025-12-25 at 16.06.38.jpeg" alt="Avatar" className="avatar-image" />
+              <img src="/WhatsApp Image 2025-12-25 at 16.06.38.jpeg" alt="Avatar" className="avatar-image" />
             </div>
           </div>
           <h2 className="hero-name">Bhupesh Panwar</h2>
