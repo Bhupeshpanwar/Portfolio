@@ -1,11 +1,13 @@
+
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, Code2, Server, Database, FileCode, ExternalLink, Menu, X, ChevronDown } from 'lucide-react';
+
+// Placeholder SVG components - replace with your actual SVG components
 import { Fiverr, Github1 } from '../Svg';
 import { LinkedIn } from '../Svg';
 import { XIcon } from '../Svg';
 import { MailIcon } from '../Svg';
 import { Portfolio } from '../Svg';
-
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,6 +70,7 @@ const projects = [
     link: 'https://github.com/Bhupeshpanwar/awsgame'
   }
 ];
+
 const certificates = [
   {
     title: 'IBM AI Fundamentals',
@@ -85,9 +88,6 @@ const certificates = [
     description: 'Completed a Python course on Udemy, covering fundamentals and advanced concepts.'
   }
 ];
-
-
-
 
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId);
@@ -117,12 +117,14 @@ const certificates = [
           background-color: #000;
           color: #fff;
           line-height: 1.6;
+          overflow-x: hidden;
         }
 
         .app {
           min-height: 100vh;
           background-color: #000;
           color: #fff;
+          overflow-x: hidden;
         }
 
         /* Navigation */
@@ -130,7 +132,7 @@ const certificates = [
           position: fixed;
           top: 0;
           width: 100%;
-          background-color: rgba(0, 0, 0, 0.9);
+          background-color: rgba(0, 0, 0, 0.95);
           backdrop-filter: blur(10px);
           z-index: 50;
           border-bottom: 1px solid #1a1a1a;
@@ -139,7 +141,7 @@ const certificates = [
         .nav-container {
           max-width: 1200px;
           margin: 0 auto;
-          padding: 1rem 1.5rem;
+          padding: 0.75rem 1rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -148,11 +150,11 @@ const certificates = [
         .logo-container {
           display: flex;
           align-items: center;
-          gap: 15px;
+          gap: 10px;
         }
 
         .logo {
-          font-size: 1.5rem;
+          font-size: 1.1rem;
           font-weight: 700;
         }
 
@@ -162,7 +164,7 @@ const certificates = [
         }
 
         .nav-links.desktop {
-          display: flex;
+          display: none;
         }
 
         .nav-link {
@@ -193,6 +195,7 @@ const certificates = [
           color: #fff;
           cursor: pointer;
           display: block;
+          padding: 0.25rem;
         }
 
         .mobile-menu {
@@ -224,7 +227,7 @@ const certificates = [
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 5rem 1.5rem;
+          padding: 4rem 1rem;
         }
 
         section.alt-bg {
@@ -248,66 +251,75 @@ const certificates = [
         .hero-content {
           text-align: center;
           max-width: 900px;
+          padding-top: 2rem;
         }
 
-       .hero-avatar {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-}
+        .hero-avatar {
+          display: inline-block;
+          margin-bottom: 1rem;
+        }
 
-.avatar-circle {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-}
+        .avatar-circle {
+          width: 6rem;
+          height: 6rem;
+          border-radius: 50%;
+          background-color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+          overflow: hidden;
+          margin: 0 auto;
+        }
 
-.avatar-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+        .avatar-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
 
         .hero-name {
-          font-size: 2.5rem;
+          font-size: 1.75rem;
           font-weight: 600;
           margin-bottom: 0.5rem;
         }
 
         .hero-title {
-          font-size: 3rem;
+          font-size: 2rem;
           font-weight: 700;
-          margin-bottom: 1.5rem;
+          margin-bottom: 1rem;
+          line-height: 1.2;
         }
 
         .hero-subtitle {
-          font-size: 1.25rem;
+          font-size: 1rem;
           color: #999;
-          margin-bottom: 2rem;
+          margin-bottom: 1.5rem;
+          padding: 0 1rem;
         }
 
         .hero-buttons {
           display: flex;
-          justify-content: center;
-          gap: 1rem;
-          margin-bottom: 3rem;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.75rem;
+          margin-bottom: 2rem;
+          padding: 0 1rem;
         }
 
         .btn {
-          padding: 0.75rem 2rem;
+          padding: 0.75rem 1.5rem;
           border-radius: 0.125rem;
           font-weight: 600;
           cursor: pointer;
           transition: all 0.3s;
-          font-size: 1rem;
+          font-size: 0.95rem;
           font-family: inherit;
           text-decoration: none;
           display: inline-block;
+          width: 100%;
+          max-width: 250px;
+          text-align: center;
         }
 
         .btn-primary {
@@ -347,7 +359,7 @@ const certificates = [
         }
 
         .scroll-indicator {
-          margin-top: 3rem;
+          margin-top: 2rem;
           cursor: pointer;
         }
 
@@ -368,25 +380,25 @@ const certificates = [
 
         /* Section Title */
         .section-title {
-          font-size: 2.25rem;
+          font-size: 1.75rem;
           font-weight: 700;
           text-align: center;
-          margin-bottom: 4rem;
+          margin-bottom: 2.5rem;
         }
 
         /* Skills Section */
         .skills-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 2rem;
-          margin-bottom: 3rem;
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+          margin-bottom: 2rem;
         }
 
         .skill-card {
           background-color: #000;
           border: 1px solid #1a1a1a;
           border-radius: 0.125rem;
-          padding: 1.5rem;
+          padding: 1.25rem;
           transition: border-color 0.3s;
         }
 
@@ -403,31 +415,36 @@ const certificates = [
         .skill-icon {
           background-color: #fff;
           color: #000;
-          padding: 0.75rem;
+          padding: 0.625rem;
           border-radius: 0.125rem;
           margin-right: 1rem;
           display: flex;
           align-items: center;
           justify-content: center;
+          flex-shrink: 0;
         }
 
         .skill-info {
           flex: 1;
+          min-width: 0;
         }
 
         .skill-name-row {
           display: flex;
           justify-content: space-between;
           margin-bottom: 0.5rem;
+          gap: 0.5rem;
         }
 
         .skill-name {
-          font-size: 1.125rem;
+          font-size: 1rem;
           font-weight: 600;
         }
 
         .skill-level {
           color: #999;
+          font-size: 0.9rem;
+          flex-shrink: 0;
         }
 
         .progress-bar-bg {
@@ -447,14 +464,14 @@ const certificates = [
         .tech-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 1rem;
+          gap: 0.75rem;
         }
 
         .tech-item {
           background-color: #000;
           border: 1px solid #1a1a1a;
           border-radius: 0.125rem;
-          padding: 1rem;
+          padding: 0.75rem;
           text-align: center;
           transition: border-color 0.3s;
         }
@@ -465,119 +482,125 @@ const certificates = [
 
         .tech-name {
           color: #ccc;
+          font-size: 0.9rem;
         }
 
         /* Projects Section */
-       .projects-scroll-container {
-  overflow: hidden;
-  position: relative;
-}
+        .projects-scroll-container {
+          overflow-x: auto;
+          overflow-y: hidden;
+          position: relative;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: thin;
+          scrollbar-color: #333 #000;
+        }
 
-.projects-grid {
-  display: flex;
-  gap: 2rem;
-  animation: scroll 20s linear infinite;
-}
+        .projects-scroll-container::-webkit-scrollbar {
+          height: 8px;
+        }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-100% - 2rem));
-  }
-}
+        .projects-scroll-container::-webkit-scrollbar-track {
+          background: #000;
+        }
 
-.projects-grid:hover {
-  animation-play-state: paused;
-}
+        .projects-scroll-container::-webkit-scrollbar-thumb {
+          background: #333;
+          border-radius: 4px;
+        }
 
-.project-card {
-  min-width: 350px;
-  max-width: 350px;
-  flex-shrink: 0;
-  background-color: #0a0a0a;
-  border: 1px solid #1a1a1a;
-  border-radius: 0.125rem;
-  overflow: hidden;
-  transition: border-color 0.3s;
-}
+        .projects-grid {
+          display: flex;
+          gap: 1rem;
+          padding-bottom: 1rem;
+        }
 
-.project-card:hover {
-  border-color: #fff;
-}
+        .project-card {
+          min-width: 280px;
+          max-width: 280px;
+          flex-shrink: 0;
+          background-color: #0a0a0a;
+          border: 1px solid #1a1a1a;
+          border-radius: 0.125rem;
+          overflow: hidden;
+          transition: border-color 0.3s;
+        }
 
-.project-image {
-  height: 8rem;
-  background-color: #1a1a1a;
-}
+        .project-card:hover {
+          border-color: #fff;
+        }
 
-.project-content {
-  padding: 1.5rem;
-}
+        .project-image {
+          height: 7rem;
+          background-color: #1a1a1a;
+        }
 
-.project-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
+        .project-content {
+          padding: 1.25rem;
+        }
 
-.project-description {
-  color: #999;
-  margin-bottom: 1rem;
-  font-size: 0.875rem;
-}
+        .project-title {
+          font-size: 1.1rem;
+          font-weight: 700;
+          margin-bottom: 0.625rem;
+        }
 
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
+        .project-description {
+          color: #999;
+          margin-bottom: 0.875rem;
+          font-size: 0.85rem;
+          line-height: 1.5;
+        }
 
-.tech-tag {
-  background-color: #1a1a1a;
-  padding: 0.25rem 0.75rem;
-  border-radius: 0.125rem;
-  font-size: 0.75rem;
-  border: 1px solid #333;
-}
+        .tech-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.375rem;
+          margin-bottom: 0.875rem;
+        }
 
-.project-link {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  transition: color 0.3s;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  font-family: inherit;
-  padding: 0;
-}
+        .tech-tag {
+          background-color: #1a1a1a;
+          padding: 0.25rem 0.625rem;
+          border-radius: 0.125rem;
+          font-size: 0.7rem;
+          border: 1px solid #333;
+        }
 
-.project-link:hover {
-  color: #ccc;
-}
+        .project-link {
+          display: flex;
+          align-items: center;
+          color: #fff;
+          transition: color 0.3s;
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 0.9rem;
+          font-family: inherit;
+          padding: 0;
+        }
 
-.icon-small {
-  width: 1rem;
-  height: 1rem;
-  margin-left: 0.5rem;
-}
+        .project-link:hover {
+          color: #ccc;
+        }
+
+        .icon-small {
+          width: 0.875rem;
+          height: 0.875rem;
+          margin-left: 0.375rem;
+        }
 
         /* Certification Section */
         .cert-grid {
           display: grid;
-          grid-template-columns: repeat(1, 1fr);
-          gap: 2rem;
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
         }
 
         .cert-card {
           background-color: #000;
           border: 1px solid #1a1a1a;
           border-radius: 0.125rem;
-          padding: 2rem;
+          padding: 1.5rem;
           transition: border-color 0.3s;
         }
 
@@ -586,57 +609,116 @@ const certificates = [
         }
 
         .cert-title {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           font-weight: 700;
           margin-bottom: 0.5rem;
         }
 
         .cert-issuer {
           color: #999;
-          margin-bottom: 1rem;
+          margin-bottom: 0.75rem;
+          font-size: 0.9rem;
         }
 
         .cert-description {
           color: #ccc;
+          font-size: 0.9rem;
+          line-height: 1.5;
         }
 
         /* Contact Section */
         .contact-icons-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 3rem;
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+          justify-items: center;
+          max-width: 400px;
+          margin: 0 auto;
         }
 
         .contact-icon-wrapper {
           cursor: pointer;
           transition: transform 0.3s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .contact-icon-wrapper:hover {
-          transform: scale(1.1);
+          transform: scale(1.05);
         }
 
-        .contact-icon-wrapper svg {
-          width: 100px;
-          height: 100px;
+        .contact-icon-wrapper svg,
+        .contact-icon-wrapper > div {
+          width: 80px !important;
+          height: 80px !important;
         }
 
         /* Footer */
         .footer {
           border-top: 1px solid #1a1a1a;
-          padding: 2rem;
+          padding: 1.5rem 1rem;
           text-align: center;
           color: #666;
+          font-size: 0.875rem;
         }
 
         .icon {
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 1.25rem;
+          height: 1.25rem;
         }
 
-        /* Responsive */
+        /* Responsive - Tablet */
+        @media (min-width: 640px) {
+          .hero-name {
+            font-size: 2.25rem;
+          }
+
+          .hero-title {
+            font-size: 2.75rem;
+          }
+
+          .hero-subtitle {
+            font-size: 1.125rem;
+          }
+
+          .hero-buttons {
+            flex-direction: row;
+            justify-content: center;
+          }
+
+          .btn {
+            width: auto;
+          }
+
+          .section-title {
+            font-size: 2rem;
+          }
+
+          .skills-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+          }
+
+          .project-card {
+            min-width: 320px;
+            max-width: 320px;
+          }
+
+          .contact-icons-container {
+            grid-template-columns: repeat(4, 1fr);
+            max-width: 600px;
+            gap: 2.5rem;
+          }
+
+          .contact-icon-wrapper svg,
+          .contact-icon-wrapper > div {
+            width: 90px !important;
+            height: 90px !important;
+          }
+        }
+
+        /* Responsive - Desktop */
         @media (min-width: 768px) {
           .menu-btn {
             display: none;
@@ -644,6 +726,27 @@ const certificates = [
 
           .nav-links.desktop {
             display: flex;
+          }
+
+          .logo {
+            font-size: 1.5rem;
+          }
+
+          .nav-container {
+            padding: 1rem 1.5rem;
+          }
+
+          section {
+            padding: 5rem 1.5rem;
+          }
+
+          .hero-content {
+            padding-top: 0;
+          }
+
+          .avatar-circle {
+            width: 8rem;
+            height: 8rem;
           }
 
           .hero-name {
@@ -660,14 +763,117 @@ const certificates = [
 
           .section-title {
             font-size: 3rem;
+            margin-bottom: 4rem;
+          }
+
+          .skills-grid {
+            gap: 2rem;
+            margin-bottom: 3rem;
+          }
+
+          .skill-card {
+            padding: 1.5rem;
+          }
+
+          .skill-icon {
+            padding: 0.75rem;
+          }
+
+          .skill-name {
+            font-size: 1.125rem;
           }
 
           .tech-grid {
             grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+          }
+
+          .tech-item {
+            padding: 1rem;
+          }
+
+          .tech-name {
+            font-size: 1rem;
+          }
+
+          .projects-grid {
+            gap: 2rem;
+          }
+
+          .project-card {
+            min-width: 350px;
+            max-width: 350px;
+          }
+
+          .project-image {
+            height: 8rem;
+          }
+
+          .project-content {
+            padding: 1.5rem;
+          }
+
+          .project-title {
+            font-size: 1.25rem;
+          }
+
+          .project-description {
+            font-size: 0.875rem;
+          }
+
+          .tech-tag {
+            font-size: 0.75rem;
+          }
+
+          .project-link {
+            font-size: 1rem;
+          }
+
+          .icon-small {
+            width: 1rem;
+            height: 1rem;
           }
 
           .cert-grid {
             grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+          }
+
+          .cert-card {
+            padding: 2rem;
+          }
+
+          .cert-title {
+            font-size: 1.5rem;
+          }
+
+          .cert-issuer {
+            font-size: 1rem;
+          }
+
+          .cert-description {
+            font-size: 1rem;
+          }
+
+          .contact-icons-container {
+            gap: 3rem;
+            max-width: none;
+          }
+
+          .contact-icon-wrapper svg,
+          .contact-icon-wrapper > div {
+            width: 100px !important;
+            height: 100px !important;
+          }
+
+          .footer {
+            padding: 2rem;
+            font-size: 1rem;
+          }
+
+          .icon {
+            width: 1.5rem;
+            height: 1.5rem;
           }
         }
 
@@ -676,10 +882,33 @@ const certificates = [
             grid-template-columns: repeat(3, 1fr);
           }
         }
+
+        /* Small mobile fixes */
+        @media (max-width: 360px) {
+          .hero-title {
+            font-size: 1.75rem;
+          }
+
+          .hero-name {
+            font-size: 1.5rem;
+          }
+
+          .section-title {
+            font-size: 1.5rem;
+          }
+
+          .contact-icons-container {
+            gap: 1.5rem;
+          }
+
+          .contact-icon-wrapper svg,
+          .contact-icon-wrapper > div {
+            width: 70px !important;
+            height: 70px !important;
+          }
+        }
       `}</style>
 
-      {/* Navigation */}
-      
       <nav className="navbar">
         <div className="nav-container">
           <div className="logo-container">
@@ -715,7 +944,6 @@ const certificates = [
         )}
       </nav>
 
-      {/* Hero Section */}
       <section id="home">
         <div className="hero-content">
           <div className="hero-avatar">
@@ -741,7 +969,6 @@ const certificates = [
         </div>
       </section>
 
-      {/* Skills Section */}
       <section id="skills" className="alt-bg">
         <div className="section-container">
           <h2 className="section-title">Technical Skills</h2>
@@ -775,7 +1002,6 @@ const certificates = [
         </div>
       </section>
 
-      {/* Projects Section */}
       <section id="projects">
         <div className="section-container large">
           <h2 className="section-title">Featured Projects</h2>
@@ -804,7 +1030,6 @@ const certificates = [
         </div>
       </section>
 
-      {/* Certification Section */}
       <section id="certification" className="alt-bg">
         <div className="section-container large">
           <h2 className="section-title">Certifications</h2>
@@ -821,14 +1046,13 @@ const certificates = [
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact">
         <div className="section-container">
           <h2 className="section-title">Get In Touch</h2>
           <div className="contact-icons-container">
-           <a className="contact-icon-wrapper" href="https://www.fiverr.com/s/BRZ1eVz">
-  <Fiverr />
-</a>
+            <a className="contact-icon-wrapper" href="https://www.fiverr.com/s/BRZ1eVz">
+              <Fiverr />
+            </a>
 
 <a className="contact-icon-wrapper" href="https://www.linkedin.com/in/bhupesh-panwar-96b855238/">
   <LinkedIn />
